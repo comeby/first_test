@@ -1,0 +1,342 @@
+/* Bluesteel StyleSheet Document Version 3.02
+ * Created by Trinity of ZionMatrix
+ * For Use with The Trinity Edition of BNBT 7.7r3.2004.07.15 and 2004.09.30
+ *
+ * Project Homepage - http://bnbteasytracker.sourceforge.net/
+ */
+ 
+/* STANDARD BODY ELEMENTS --------------------------------------------------- */
+
+img {
+
+    vertical-align:            middle                   ;
+    
+}
+
+body {
+
+    color:                     black                 ;
+    background-color:          white                 ;
+    font-family:               tahoma                ;
+    font-size:                 8pt                   ;
+    font-weight:               normal                ;
+
+}
+
+p { /* Used often; places text/objects in Block Level Paragraphs */
+
+    color:                     inherit               ;
+    font-family:               inherit               ;
+    font-size:                 inherit               ;
+    font-weight:               inherit               ;
+
+}
+
+h1 {
+
+    color:                     inherit               ;
+    font-family:               inherit               ;
+    font-size:                 20pt                  ;
+    font-weight:               normal                ;
+
+}
+
+h2 {
+
+    color:                     inherit               ;
+    font-family:               inherit               ;
+    font-size:                 15pt                  ;
+    font-weight:               normal                ;
+
+}
+
+h3 { /* Used for the Header Text on each Tracker Page */
+
+    color:                     inherit               ;
+    font-family:               inherit               ;
+    font-size:                 15pt                  ;
+    font-weight:               normal                ;
+}
+
+h4 { /* Used for subsequent Header Text - specific to TTE
+      * These settings should match what you have for H3 */
+      
+    color:                     inherit               ;
+    font-family:               inherit               ;
+    font-size:                 15pt                  ;
+    font-weight:               normal                ;
+    
+}
+
+/* HYPERLINKED TEXT ELEMENTS */
+
+a {
+
+    color:                     #3F419B               ; /* specifies the default (unvisited) link color */
+    font-family:               tahoma                ;
+    font-size:                 8pt                   ;
+    font-weight:               normal                ;
+    text-decoration:           none                  ; /* none | underline | overline | line-through */
+
+}
+
+a:hover { /* Used to specify hyperlinked text style when the user's mouse hovers over the link */
+
+    color:                     #404040                 ;
+    font-family:               tahoma                ;
+    font-size:                 8pt                   ;
+    font-weight:               normal                ;
+    text-decoration:           underline             ;
+    
+}
+
+a.sort { /* Used to specify style for the A and Z sort links in the column headers */
+
+    color:                     black                 ;
+    font-family:               tahoma                ;
+    font-size:                 8pt                   ;
+    font-weight:               normal                ;
+    text-transform:            lowercase             ;
+    
+}
+
+a.sort:hover {
+
+    text-transform:            uppercase             ;
+    text-decoration:           none                  ;
+    
+    /* You will notice that only one specification is being used... when this
+     * happens, the other specs are taken from the parent. In this case, that
+     * would be "a.sort"
+     */
+    
+}
+
+/* a.download {
+ */
+/* Used to further specify style for the DL (Download) Link
+ * since it is not being used in this stylesheet, its properties are taken
+ * from the parent, which in this case is "a". This holds true for any
+ * "element.class" not specified.
+ */
+/* }
+ */
+ 
+/* a.hash {
+
+} */
+
+/* The above is used to specify the style for the hyperlinked hash id when displayed in your torrent table */
+
+ 
+/* TABLE SPECIFICATIONS ----------------------------------------------------- */
+
+table {
+
+      /* the space between cell borders; filled with background color */
+    border-spacing:            2pt                   ;
+      /* forces empty cells to be rendered; useful for display borders on empty cells */
+    empty-cells:               show                  ;
+    
+}
+
+tr.even, tr.com_body { /* specifies the bgcolor for even numbered rows AND for user comments */
+
+    background-color:          #DEE3E7               ;
+
+}
+
+tr.odd, tr.com_header { /* specifies the bgcolor for odd numbered rows AND user comment headers*/
+
+    background-color:          #EFEFEF               ;
+
+}
+
+code { /* specifies attributes of user commented text */
+
+    font-family:               inherit                ;
+    
+}
+
+
+    
+/* CLASSES FOR THE <TH> and <TD> ELEMENTS
+.tag          - the category tag
+.hash         - the torrent hash
+.name         - torrent name, uploader's name
+.download     - download link
+.number       - comments, files, seeders, leechers, completed
+.date         - date added
+.bytes        - size, transferred
+.percent      - min/average/max | progress/left
+.infolink     - InfoLink
+.admin        - Admin
+.ip           - for IP Addresses on stats.html
+.connected    - for connected time on stats.html
+*/
+
+th { /* specifies properties for the column headers */
+
+    color:                     black                 ; /* text color */
+    background-color:          #C0C0C0               ;
+    font-family:               tahoma                ;
+    font-size:                 8pt                   ;
+    padding:                   5px 10px 5px 10px     ; /* specifies the space around the text in the cell (top, right, bottom, left) */
+    vertical-align:            top                   ; /* specifies the vertical alignment of the text in the cell */
+    text-transform:            none                  ;
+    border:                    1px solid black       ;
+    
+}
+
+td {
+
+    color:                     black                 ; /* text color */
+    font-family:               tahoma                ;
+    font-size:                 8pt                   ;
+    padding:                   5px 10px 5px 10px     ;
+    
+}
+
+td.name, td.download, td.bytes, td.date, td.infolink, td.admin {
+
+    white-space:               nowrap                ;
+    
+}
+
+td.download, td.percent, td.infolink, td.admin, td.ip {
+
+    text-align:                center                ;
+    
+}
+
+td.bytes, td.connected {
+
+    text-align:                right                 ;
+    
+}
+
+td.number, td.number_red, td.number_yellow, td.number_green {
+
+    text-align:                center                ;
+    
+}
+
+td.number_red, td.number_yellow, td.number_green {
+
+    border:                    1px solid black       ;
+    
+}
+
+td.number_red {
+
+    color:                     red                   ;
+    
+}
+
+td.number_yellow {
+
+    color:                     #FFA24A               ;
+
+}
+
+td.number_green {
+
+    color:                     green                 ;
+
+}
+
+/* MISCELLANEOUS ------------------------------------------------------------ */
+
+.pipe { /* specifies style for the vertical line (or pipe) between the tag filter images */
+
+    color:                     white                 ;
+    
+}
+
+/* CSS NOTE:
+ * You will notice that the element name was not specified above... this specification
+ * will have an effect on all elements with the class name "pipe", but since .pipe is
+ * only used for <span>, we don't have to worry about. This is basically shorthand.
+ */
+ 
+.username { /* specifies style for the username displayed in logged in messages */
+
+    color:                     red                   ;
+    
+}
+
+.clearfilter { /* disables the Clear Filter button above the the tag filter images */
+
+    display:                   none                  ; /* change to "normal" to enable */
+
+}
+
+input, select, option {
+
+    font-family:               tahoma                ;
+    font-size:                 8pt                   ;
+    
+}
+
+.gen_index { /* specifies style for the page generation time on index.html */
+
+    text-align:                center                ;
+    
+}
+
+
+/* NAVIGATION BAR TWEAKS ---------------------------------------------------- */
+
+body {
+
+    margin:                    0px                   ;
+    
+}
+
+table.navbar {
+
+    background-color:          #EFEFEF               ;
+    border-bottom:             1px solid black       ;
+    margin:                    0px                   ;
+    position:                  absolute              ;
+    top:                       0px                   ;
+    left:                      0px                   ;
+    
+}
+
+p, form, table, h3, h4, input.help_upload {
+
+    margin-left:               15px                  ;
+    
+}
+
+h3, h4 {
+
+    margin-top:                50px                  ; /* moves the page headers down some because of the fixed navbar */
+
+}
+
+td.navbar, td.navbar_search {
+
+    vertical-align:            top                   ;
+    white-space:               nowrap                ;
+    
+}
+
+td.navbar_search {
+
+    text-align:                right                 ; /* forces the search form to align right */
+    
+}
+
+table {
+
+    margin:                    15px                  ;
+    
+}
+
+.gen_index {
+
+    margin-top:                30px                  ;
+    
+}
